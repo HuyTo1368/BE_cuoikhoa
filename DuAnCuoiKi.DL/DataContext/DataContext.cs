@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DuAnCuoiKi.DL.DataContext
+namespace DuAnCuoiKi.DL
 {
-    internal class DataContext
+    public class DataContext
     {
         /// <summary>
         /// Chuỗi kết nối tới My Sql

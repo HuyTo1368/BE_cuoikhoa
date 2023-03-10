@@ -1,3 +1,7 @@
+using DuAnCuoiKi.DL.AuthDL;
+using DuAnCuoiKi.DL;
+using DuAnCuoiKi.BL.Auth;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +10,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<ILoginBL, LoginBL>();
+builder.Services.AddScoped<ILoginDL, LoginDL>();
+
+DataContext.MySqlConnectionString = builder.Configuration.GetConnectionString("MySqlConnectionString");
 
 var app = builder.Build();
 

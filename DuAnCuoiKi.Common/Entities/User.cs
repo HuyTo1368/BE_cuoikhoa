@@ -9,8 +9,9 @@ namespace DuAnCuoiKi.Common.Entities
     /// <summary>
     /// Thông tin đăng nhập
     /// </summary>
-    internal class User
+    public class User
     {
+        
         public Guid UserID { get; set; }
         public string UserName { get; set; }
         public string UserPassword { get; set; }
