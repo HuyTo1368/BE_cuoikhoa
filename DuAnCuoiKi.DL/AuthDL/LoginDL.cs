@@ -12,21 +12,21 @@ namespace DuAnCuoiKi.DL.AuthDL
 {
     public class LoginDL:ILoginDL
     {
-        public object CheckLogin(string userName, string UserPassword) {
-            object inforUser;
+        public Guid CheckLogin(string userName, string UserPassword) {
+            Guid userID;
             DynamicParameters parameters = new DynamicParameters();
             parameters.Add($"userName", userName);
             parameters.Add($"userPassword", UserPassword);
             string storeProcedureName = string.Format(Procedures.Proc_CheckLogin, typeof(User).Name);
             using (var mysqlConnection = new MySqlConnection(DataContext.MySqlConnectionString))
             {
-                inforUser = mysqlConnection.QueryFirstOrDefault<User>(
+                userID = mysqlConnection.QueryFirstOrDefault<Guid>(
                 storeProcedureName,
                 parameters,
                 commandType: System.Data.CommandType.StoredProcedure
                 );
             }
-            return inforUser;
+            return userID;
         }
     }
 }

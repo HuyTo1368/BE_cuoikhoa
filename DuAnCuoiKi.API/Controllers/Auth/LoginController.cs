@@ -23,8 +23,14 @@ namespace DuAnCuoiKi.API.Controllers.Auth
             try
             {
                 var result = _loginBL.CheckLogin(userName, userPassword);
-                return StatusCode(StatusCodes.Status200OK, result);
-                
+                if(result.Success)
+                {
+                    return StatusCode(StatusCodes.Status200OK, result.Data);
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status401Unauthorized, "Sai thông tin đăng nhập");
+                }
             }
             catch (Exception e)
             {

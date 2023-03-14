@@ -8,6 +8,6 @@ namespace DuAnCuoiKi.DL.AuthDL
 {
     public interface ILoginDL
     {
-        public object CheckLogin(string userName, string UserPassword);
+        public Guid CheckLogin(string userName, string UserPassword);
     }
 }

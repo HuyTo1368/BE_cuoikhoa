@@ -12,7 +12,7 @@ namespace DuAnCuoiKi.Common.Entities
     public class User
     {
         
-        public Guid UserID { get; set; }
+        public Guid UserLoginID { get; set; }
         public string UserName { get; set; }
         public string UserPassword { get; set; }
     }
