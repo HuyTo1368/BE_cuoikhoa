@@ -1,0 +1,4 @@
+các chức năng cần có 
+- Đăng kí/đăng nhập
+- Lấy thông tin cá nhân, chỉnh sửa
+- Lấy ảnh, bình luận, lượt thả cảm xúc

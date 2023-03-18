@@ -68,5 +68,14 @@ namespace DuAnCuoiKi.Common.Resources {
                 return ResourceManager.GetString("Proc_CheckLogin", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Proc_UserInfor_GetInfor.
+        /// </summary>
+        public static string Proc_UserInfor_GetInfor {
+            get {
+                return ResourceManager.GetString("Proc_UserInfor_GetInfor", resourceCulture);
+            }
+        }
     }
 }

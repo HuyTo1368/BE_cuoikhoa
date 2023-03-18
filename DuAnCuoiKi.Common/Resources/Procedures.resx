@@ -121,4 +121,8 @@
     <value>Proc_CheckLogin</value>
     <comment>Kiểm tra dữ liệu có trong database không</comment>
   </data>
+  <data name="Proc_UserInfor_GetInfor" xml:space="preserve">
+    <value>Proc_UserInfor_GetInfor</value>
+    <comment>Lấy thông tin cá nhân</comment>
+  </data>
 </root>
