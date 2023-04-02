@@ -117,20 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Proc_CheckLogin" xml:space="preserve">
-    <value>Proc_CheckLogin</value>
-    <comment>Kiểm tra dữ liệu có trong database không</comment>
+  <data name="DevMsg" xml:space="preserve">
+    <value>Search to database return 0</value>
+    <comment>Thông báo cho Dev login thất bại</comment>
   </data>
-  <data name="Proc_UserInfor_Add" xml:space="preserve">
-    <value>Proc_UserInfor_Add</value>
-    <comment>Thêm thông tin 1 user</comment>
+  <data name="MoreInfo" xml:space="preserve">
+    <value>https://openapi.com.vn/errorcode</value>
+    <comment>Đường dẫn mô tả lỗi</comment>
   </data>
-  <data name="Proc_UserInfor_GetInfor" xml:space="preserve">
-    <value>Proc_UserInfor_GetInfor</value>
-    <comment>Lấy thông tin cá nhân</comment>
+  <data name="UserMsg" xml:space="preserve">
+    <value>Tên đăng nhập hoặc mật khẩu chưa đúng</value>
+    <comment>Đăng nhập không thành công</comment>
   </data>
-  <data name="Proc_UserLogin_CheckUserName" xml:space="preserve">
-    <value>Proc_UserLogin_CheckUserName</value>
-    <comment>Kiểm tra thông tin đăng nhập đã có hay chưa</comment>
+  <data name="UserMsg_CheckUserName" xml:space="preserve">
+    <value>Tên đăng nhập đã tồn tại</value>
+    <comment>Không thể đăng kí khi trùng tên đăng nhập</comment>
   </data>
 </root>

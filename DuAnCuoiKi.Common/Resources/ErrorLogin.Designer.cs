@@ -22,14 +22,14 @@ namespace DuAnCuoiKi.Common.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Procedures {
+    public class ErrorLogin {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Procedures() {
+        internal ErrorLogin() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace DuAnCuoiKi.Common.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DuAnCuoiKi.Common.Resources.Procedures", typeof(Procedures).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("DuAnCuoiKi.Common.Resources.ErrorLogin", typeof(ErrorLogin).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,38 +61,38 @@ namespace DuAnCuoiKi.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Proc_CheckLogin.
+        ///   Looks up a localized string similar to Search to database return 0.
         /// </summary>
-        public static string Proc_CheckLogin {
+        public static string DevMsg {
             get {
-                return ResourceManager.GetString("Proc_CheckLogin", resourceCulture);
+                return ResourceManager.GetString("DevMsg", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Proc_UserInfor_Add.
+        ///   Looks up a localized string similar to https://openapi.com.vn/errorcode.
         /// </summary>
-        public static string Proc_UserInfor_Add {
+        public static string MoreInfo {
             get {
-                return ResourceManager.GetString("Proc_UserInfor_Add", resourceCulture);
+                return ResourceManager.GetString("MoreInfo", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Proc_UserInfor_GetInfor.
+        ///   Looks up a localized string similar to Tên đăng nhập hoặc mật khẩu chưa đúng.
         /// </summary>
-        public static string Proc_UserInfor_GetInfor {
+        public static string UserMsg {
             get {
-                return ResourceManager.GetString("Proc_UserInfor_GetInfor", resourceCulture);
+                return ResourceManager.GetString("UserMsg", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Proc_UserLogin_CheckUserName.
+        ///   Looks up a localized string similar to Tên đăng nhập đã tồn tại.
         /// </summary>
-        public static string Proc_UserLogin_CheckUserName {
+        public static string UserMsg_CheckUserName {
             get {
-                return ResourceManager.GetString("Proc_UserLogin_CheckUserName", resourceCulture);
+                return ResourceManager.GetString("UserMsg_CheckUserName", resourceCulture);
             }
         }
     }
