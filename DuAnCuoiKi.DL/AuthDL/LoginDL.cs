@@ -12,6 +12,12 @@ namespace DuAnCuoiKi.DL.AuthDL
 {
     public class LoginDL : ILoginDL
     {
+        /// <summary>
+        /// Kiểm tra thông tin đăng nhập
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <param name="UserPassword"></param>
+        /// <returns></returns>
         public Guid CheckLogin(string userName, string UserPassword) {
             Guid userID;
             DynamicParameters parameters = new DynamicParameters();
