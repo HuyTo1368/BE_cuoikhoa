@@ -72,7 +72,7 @@ namespace DuAnCuoiKi.DL.AuthDL
                 parameters_checkUserName,
                 commandType: System.Data.CommandType.StoredProcedure
                 );
-                if(checkUserName == null && checkUserName == "" )
+                if(checkUserName == null || checkUserName == "" )
                 {
                     numberOfAffectdRows = mysqlConnection.Execute(storeProdureName,
                     parameters,

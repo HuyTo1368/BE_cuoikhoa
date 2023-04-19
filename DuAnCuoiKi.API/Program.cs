@@ -7,10 +7,33 @@ using DuAnCuoiKi.DL.Posts;
 using DuAnCuoiKi.BL.APosts;
 using DuAnCuoiKi.DL.Comment;
 using DuAnCuoiKi.BL.Comment;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using DuAnCuoiKi.Common.DTO;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddCors(option =>
+{
+    option.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().AllowCredentials().AllowCredentials().Build());
+});
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = ConfigJWT.ISSUER,
+            ValidAudience = ConfigJWT.AUDIENCE,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(ConfigJWT.SECRECTKEY))
+        };
+    });
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -26,6 +49,8 @@ builder.Services.AddScoped<ICommentDL, CommentDL>();
 builder.Services.AddScoped<ICommentBL, CommentBL>();
 
 
+
+
 DataContext.MySqlConnectionString = builder.Configuration.GetConnectionString("MySqlConnectionString");
 
 var app = builder.Build();
@@ -38,6 +63,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

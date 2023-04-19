@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Configuration;
 
 namespace DuAnCuoiKi.Common.Entities
 {
